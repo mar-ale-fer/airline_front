@@ -6,11 +6,11 @@ import { usersFiltersType } from './operations/UsersFiltersType';
 import { Button, FormGroup, FormControl } from '@material-ui/core';
 
 const options = [
-    {label:'Administrador', value:'ADMINISTRATOR'},
-    {label:'Instituto', value:'INSTITUTE'},
-    {label:'Secretaría', value:'SECRETARY'},
-    {label:'Estudiante', value:'STUDENT'},
-    {label:'Profesor/a', value:'TEACHER'}
+    {label:'Admin', value:'ADMINISTRATOR'},
+    {label:'Airline', value:'AIRLINE'},
+    {label:'Ramp', value:'RAMP'},
+    {label:'Gate', value:'GATE'},
+    {label:'OCC', value:'OCC'}
 ]
 
 export type userForm = usersFiltersType &
@@ -124,7 +124,7 @@ export const UserForm = ( {
                         onBlur={props.handleBlur}
                         name="mustChangePassword"  
                     />
-                        ¿Cambiar la clave en primer ingreso?
+                        Change password on first login?
                     </label>
 
                     <FormControl component="fieldset" style={{ display: "flex"}}>
@@ -151,8 +151,6 @@ export const UserForm = ( {
                     <Button variant="contained" color="primary" onClick={GoBackToUsers} type="submit">
                         Cancelar
                     </Button>
-                    <h3>Values</h3>
-                    <pre>{JSON.stringify(props.values)}</pre>
                 </Form>
             )}
         </Formik>

@@ -49,10 +49,10 @@ const Login = () => {
               console.log(authresponse.user);
               console.log(authresponse.user.mustChangePassword);
               if (authresponse.user.mustChangePassword) {
-                alert("A continuación debe cambiar su password");
+                alert("Next you need to change your password");
                 navigate("/change-password");
               } else {
-                alert("Sesión iniciada");
+                alert("You are logged-in");
                 navigate("/");
               }
             } else {
@@ -106,7 +106,7 @@ const Login = () => {
               // onClick={submitForm}
               type="submit"
             >
-              Iniciar la sesión{" "}
+              Login{" "}
             </Button>
           </Form>
           <Typography>

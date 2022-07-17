@@ -37,7 +37,7 @@ const ChangePasswordPage = () => {
             console.log(data.data.userOwnChangePassword);
             const authresponse: any = data.data.userOwnChangePassword;
             if (authresponse.success) {
-              alert("Cambiaste correctamente tu password");
+              alert("Password updated!");
               navigate("/");
             } else {
               actions.setFieldError("general", authresponse.message);
@@ -88,7 +88,7 @@ const ChangePasswordPage = () => {
               // onClick={submitForm}
               type="submit"
             >
-              Cambiar password{" "}
+              Change password{" "}
             </Button>
           </Form>
           <Typography>

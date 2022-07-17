@@ -2,6 +2,7 @@ import { roleAndAllType } from "../../types/roleType";
 import { menuItemstype } from "../../types/menuItemType";
 
 export let ROLE_ACCESSES = new Map<roleAndAllType, menuItemstype>();
+//the airline manage the users
 ROLE_ACCESSES.set(
     "AIRLINE", [
     {
@@ -9,79 +10,67 @@ ROLE_ACCESSES.set(
         title: "Users",
         optionText: "Users"
     },
-    // {
-    //     to: "/levels",
-    //     title: "Niveles",
-    //     optionText: "Niveles"
-    // },
-    // {
-    //     to: "/currentaccounts",
-    //     title: "Cuentas corrientes",
-    //     optionText: "Cuentas corrientes"
-    // },
+]
+)
+
+//The administrator manage the flights
+ROLE_ACCESSES.set(
+    "ADMINISTRATOR", [
+    {
+        to: "/flights",
+        title: "Flights",
+        optionText: "Flights"
+    },
+]
+)
+
+//Other roles can add comments to flights
+ROLE_ACCESSES.set(
+    "OCC", [
+    {
+        to: "/flight-comments",
+        title: "Flight comments",
+        optionText: "Flight comments"
+    },
 ]
 )
 
 ROLE_ACCESSES.set(
-    "ADMINISTRATOR", [
-    // {
-    //     to: "/currentaccounts",
-    //     title: "Cuentas corrientes",
-    //     optionText: "Cuentas corrientes"
-    // },
+    "RAMP", [
+    {
+        to: "/flight-comments",
+        title: "Flight comments",
+        optionText: "Flight comments"
+    },
 ]
 )
 
-// ROLE_ACCESSES.set(
-//     "SECRETARY", [
-//     {
-//         to: "/students",
-//         title: "Estudiantes",
-//         optionText: "Estudiantes"
-//     },
-//     // {
-//     //     to: "/teachers",
-//     //     title: "Profesores",
-//     //     optionText: "Profesores"
-//     // },
-//     {
-//         to: "/levels",
-//         title: "Niveles",
-//         optionText: "Niveles"
-//     },
-//     {
-//         to: "/courses",
-//         title: "Cursos",
-//         optionText: "Cursos"
-//     }
-// ]
-// )
+ROLE_ACCESSES.set(
+    "GATE", [
+    {
+        to: "/flight-comments",
+        title: "Flight comments",
+        optionText: "Flight comments"
+    },
+]
+)
 
-// ROLE_ACCESSES.set(
-//     "TEACHER", [
-//     {
-//         to: "/attendance",
-//         title: "Tomar asistencia",
-//         optionText: "Tomar asistencia"
-//     }
-// ]
-// )
+ROLE_ACCESSES.set(
+    "PILOT", [
+    {
+        to: "/flight-comments",
+        title: "Flight comments",
+        optionText: "Flight comments"
+    },
+]
+)
 
-// ROLE_ACCESSES.set(
-//     "STUDENT", [
-//     {
-//         to: "/studentaccount",
-//         title: "Cuenta del estudiante",
-//         optionText: "Cuenta del estudiante"
-//     }
-// ]
-// )
 ROLE_ACCESSES.set(
     "LOGGED-OUT", [
     {
         to: "/login",
-        title: "Iniciar sesión",
-        optionText: "Iniciar sesión"
+        title: "Login",
+        optionText: "Login"
     },
 ]
 )
@@ -90,13 +79,13 @@ ROLE_ACCESSES.set(
     "LOGGED-IN", [
     {
         to: "/",
-        title: "Inicio",
-        optionText: "Inicio"
+        title: "Home",
+        optionText: "Home"
     },
     {
         to: "/logout",
-        title: "Cerrar sesión",
-        optionText: "Cerrar sesión"
+        title: "Logout",
+        optionText: "Logout"
     },
 ]
 )

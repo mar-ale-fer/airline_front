@@ -25,7 +25,7 @@ const UserChangePassword = ({ entityId} : userChangePasswordProps) => {
             initial_values={initial_values}
             operation={userChangePassword}
             loading={loading}
-            button_label= "Cambiar password"
+            button_label= "Change password"
             apiReturnName='userChangePassword'
             visibility={()=>setShowForm(false)}
         />

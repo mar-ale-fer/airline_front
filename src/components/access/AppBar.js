@@ -175,7 +175,7 @@ function AppBarInteraction({
           
           <img src={oxigent_logo} width="30%" alt="Oxigent logo" />
   
-          <Typography variant="h6" >
+          <Typography variant="h7" >
             Airline App
           </Typography>     
         </Drawer>
@@ -214,10 +214,10 @@ function AppBarInteraction({
                     onClick={() => {
                       userSessionReactVar(userSessionReactVar_initialvalue)
                       localStorage.setItem('token', '');
-                      alert('Sesión finalizada');
+                      alert('Session ended');
                     }}
                   >
-                    Cerrar la sesión
+                    Logout
               </Button>      
               <Typography>
               <img src={oxigent_logo} width="200px" alt="Oxigent logo" />
