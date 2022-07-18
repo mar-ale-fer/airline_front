@@ -21,17 +21,14 @@ import {
   Button
 } from '@mui/material';
 
-// import {LevelsPage} from "../../pages/levels/LevelsPage";
-// import LevelCreatePage from "../../pages/levels/LevelCreatePage"
-// import LevelUpdatePage from "../../pages/levels/LevelUpdate"
+import {FlightsPage} from "../../pages/flights/FlightsPage";
+import FlightCreatePage from "../../pages/flights/FlightCreatePage"
+import FlightUpdatePage from "../../pages/flights/FlightUpdate"
+import FlightsAndComments from "../../pages/comments/FlightsAndComments"
 
 import UsersPage from "../../pages/users/UsersPage";
 import UserCreatePage from "../../pages/users/UserCreatePage";
 import UserUpdatePage from "../../pages/users/UserUpdatePage";
-
-// import StudentsPage from "../../pages/students/StudentPage";
-// import StudentCreatePage from "../../pages/students/StudentCreatePage";
-// import StudentUpdatePage from "../../pages/students/StudentUpdate";
 
 import Login from "../../pages/access/Login"
 import ChangePassword from "../../pages/access/ChangePasswordPage";
@@ -191,18 +188,15 @@ function AppBarInteraction({
             </div>
           }>
           </Route>
-          {/* <Route path='/level-create' exact element={
-          <RequireAuth><LevelCreatePage /></RequireAuth>} /> 
-          <Route path='/levels' exact element={<RequireAuth><LevelsPage /></RequireAuth>} /> 
-          <Route path='/level-update/:entityid/:random' element={<RequireAuth><LevelUpdatePage /></RequireAuth>} /> */}
+          <Route path='/flight-create' exact element={
+          <RequireAuth><FlightCreatePage /></RequireAuth>} /> 
+          <Route path='/flights' exact element={<RequireAuth><FlightsPage /></RequireAuth>} />
+          <Route path='/flights-and-comments' exact element={<RequireAuth><FlightsAndComments /></RequireAuth>} /> dfd
+          <Route path='/flight-update/:entityid/:random' element={<RequireAuth><FlightUpdatePage /></RequireAuth>} />
 
           <Route path='/user-create' exact element={<RequireAuth><UserCreatePage /></RequireAuth>} />
           <Route path='/users' exact element={<RequireAuth><UsersPage /></RequireAuth>} />
           <Route path='/user-update/:entityid/:random' element={<RequireAuth><UserUpdatePage /></RequireAuth>} />
-
-          {/* <Route path='/student-create' exact element={<RequireAuth><StudentCreatePage /></RequireAuth>} />
-          <Route path='/students' exact element={<RequireAuth><StudentsPage /></RequireAuth>} />
-          <Route path='/student-update/:entityid/:random' element={<RequireAuth><StudentUpdatePage /></RequireAuth>} /> */}
 
           <Route path='/login' exact element={<Login />} /> 
           <Route path='/change-password' exact element={<ChangePassword />} /> 

@@ -28,7 +28,7 @@ ROLE_ACCESSES.set(
 ROLE_ACCESSES.set(
     "OCC", [
     {
-        to: "/flight-comments",
+        to: "/flights-and-comments",
         title: "Flight comments",
         optionText: "Flight comments"
     },
@@ -38,7 +38,7 @@ ROLE_ACCESSES.set(
 ROLE_ACCESSES.set(
     "RAMP", [
     {
-        to: "/flight-comments",
+        to: "/flights-and-comments",
         title: "Flight comments",
         optionText: "Flight comments"
     },
@@ -48,7 +48,7 @@ ROLE_ACCESSES.set(
 ROLE_ACCESSES.set(
     "GATE", [
     {
-        to: "/flight-comments",
+        to: "/flights-and-comments",
         title: "Flight comments",
         optionText: "Flight comments"
     },
@@ -58,7 +58,7 @@ ROLE_ACCESSES.set(
 ROLE_ACCESSES.set(
     "PILOT", [
     {
-        to: "/flight-comments",
+        to: "/flights-and-comments",
         title: "Flight comments",
         optionText: "Flight comments"
     },

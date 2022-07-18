@@ -11,12 +11,12 @@ export const cache: InMemoryCache = new InMemoryCache({
         userSessionReactVar:{
           read() { return userSessionReactVar();  }
         },
-        // levelsFilters_RV:{
-        //   read() { return levelsFilters_RV() }
-        // },
-        // levelsPageNeedsRefresh_RV:{
-        //   read() { return levelsPageNeedsRefresh_RV()}
-        // },
+        flightsFilters_RV:{
+          read() { return flightsFilters_RV() }
+        },
+        flightsPageNeedsRefresh_RV:{
+          read() { return flightsPageNeedsRefresh_RV()}
+        },
         usersFilters_RV:{
           read() { return usersFilters_RV()}
         },
@@ -50,8 +50,8 @@ export const userSessionReactVar_initialvalue : userSessionType = {
 
 export const userSessionReactVar = makeVar<userSessionType>(userSessionReactVar_initialvalue)
 
-export const levelsFilters_RV = makeVar("")
-export const levelsPageNeedsRefresh_RV = makeVar<string>("")
+export const flightsFilters_RV = makeVar("")
+export const flightsPageNeedsRefresh_RV = makeVar<string>("")
 
 export const usersFilters_RV_initialvalue : usersFiltersType = {
   firstName: "",
