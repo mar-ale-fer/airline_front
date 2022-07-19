@@ -5,7 +5,6 @@ export function CommentItem( props : any) {
     comment
   } = props
 
-  console.log(comment)
   return (
       <ListItem
       key = {`comment_item_${comment.id}`}
@@ -20,13 +19,13 @@ export function CommentItem( props : any) {
         <Grid item xs={12}>
           {comment.text}
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={4}>
           tags: {comment.tags}
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={4}>
           user: {comment.user.email}
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={4}>
           role: {comment.user.roles.roles[0]}
         </Grid>
       </Grid>

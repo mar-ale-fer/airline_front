@@ -174,7 +174,18 @@ function AppBarInteraction({
   
           <Typography variant="h7" >
             Airline App
-          </Typography>     
+          </Typography>
+          <br/>
+          <br/>
+          {(userSession && userSession.email)
+          ? (userSession.email)
+          : (<></>)
+          }
+          <br />
+          {(userSession && userSession.roles && userSession.roles.roles)
+          ? (JSON.stringify(userSession.roles.roles))
+          : (<></>)
+          }
         </Drawer>
   
    
